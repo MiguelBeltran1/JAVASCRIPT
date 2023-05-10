@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDA INGRESO</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>VALIDACION INGRESO DE SESION</h1>
+        <script>
+            let datof;//variable ingresada por usuario
+            let sw=0;//variable switche apagada
+            let clave=123;
+            //ciclo for
+            for (f=1;f<=3;f++){
+                datof=parseInt(prompt("Ingrese contraseña de acceso"));
+                if (datof==clave){
+                    swal("Estimado usuario","ACCESO PERMITIDO","success");
+                    document.write("ACCESO PERMITIDO");
+                    sw=1;//variable sw=1 cuando ingresa con contraseña (prendida)
+                    break;
+                }
+            }
+            //control de flujo programa para cuando nunca ingresa a sesion
+            if (sw==0){
+                swal("Estimado usuario","cuenta bloqueada","error");
+                document.write("CUENTA BLOQUEADA")
+            }
+        </script>
+    </center>
+</body>
+</html>
